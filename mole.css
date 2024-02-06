@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background:url("./mario-bg.jpg");
+    background-size: cover;
+}
+
+
+/* the whole board design */
+#board{
+    width:540px ; 
+    height:540px;  
+    background-color: green ;
+    margin: 0 auto ; 
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("./soil.png");
+    border: 3px solid white;
+    border-radius:25px ; 
+}
+
+
+/* every tile have this design */
+#board div{
+    /* as the board dimension is 540 x 540 . so 3 x 3 grid means 9 even tiles .*/
+    /* so this means width = 540/3 = 180px and height = 540/3  = 180px  */ 
+    width: 180px;
+    height: 180px;
+    background-image: url("./pipe.png");
+    background-size: cover;
+
+    
+}
+
+
+/* as the mole picture is very big , we need to scale it down.*/
+/*The mole image will appear in div id = "board" and into every div mole img can appear  */
+#board div img{  
+
+    width: 100px;
+    height:100px ; 
+
+    /* these five lines make sure that images are not selectable, only playable*/
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+
+
+
