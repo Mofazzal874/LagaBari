@@ -6,7 +6,36 @@ let gameOver = false ;
 
 
 window.onload = function(){ //when our page loads , we want to load the game
+    setRules() ; 
     setGame() ; 
+}
+
+
+function typeWritingEffect(element, text, i = 0) {
+    if (i == 0) {
+        element.innerHTML = ""; // Clear the inner HTML
+    }
+
+    // Check if the current character is a line break, if yes, append "<br>" instead of the character itself
+    if (text[i] === '\n') {
+        element.innerHTML += "<br>";
+    } else {
+        element.innerHTML += text[i];
+    }
+
+    if (i == text.length - 1) {
+        return;
+    }
+
+    setTimeout(() => typeWritingEffect(element, text, i + 1), 30); // Added the delay parameter of 50 milliseconds
+}
+
+function setRules(){
+    const div = document.querySelector("#rulesText") ; 
+    const text = "01.If the Mole is clicked , 10 point will be added to the score.\n02.If the piranha is clicked by any chance , then the game is over." ;
+
+    
+    typeWritingEffect(div , text) ; 
 }
 
 
@@ -81,6 +110,11 @@ function setPlant(){
     currentPlantTile.appendChild(plant) ; 
 }
 
+
+function playAgain(){
+    window.location.reload();
+}
+
 function selectTile(){
     if(gameOver) return ; 
     if(this == currentMoleTile){  //this refers to the tiles that is clicked.
@@ -90,8 +124,12 @@ function selectTile(){
 
     }
     else if(this == currentPlantTile){
-        document.getElementById("score").innerText = "Game is Over" + " .Your total score is: " + score.toString() ; 
+        document.getElementById("score").innerText = "Game is Over" + " .Your total score is: " + score.toString() ;
         gameOver = true; 
     }
 }
+
+
+
+
 

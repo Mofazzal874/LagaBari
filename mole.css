@@ -7,18 +7,58 @@ body{
 
 
 /* the whole board design */
-#board{
-    width:540px ; 
-    height:540px;  
-    background-color: green ;
-    margin: 0 auto ; 
-    display: flex;
-    flex-wrap: wrap;
 
-    background: url("./soil.png");
-    border: 3px solid white;
-    border-radius:25px ; 
+
+#play_again{
+    body {
+        font-size: 16px; /* Set the font size to 16 pixels */
+    }
+    background: beige;
+    
 }
+
+.container {
+    display: flex;
+
+    #board {
+        width: 540px;
+        height: 540px;
+        background-color: green;
+        margin: 12% auto ;
+        display: flex;
+        flex-wrap: wrap;
+        background: url("./soil.png");
+        border: 3px solid white;
+        border-radius: 25px;
+    }
+    
+    #rules {
+        width: 350px;
+        height: 350px;
+        background: url("./burn-out-paper.png");
+        background-size: cover;
+        margin-top: 100px;
+        margin-left: 0;
+        border: 3px solid white;
+        border-radius: 25px;
+    }
+    #top_info{
+        position: absolute;
+        top: 0;
+        left: 60%;
+        transform: translateX(-50%);
+    }
+
+    #board {
+        position: relative;
+    }
+
+    #rules {
+        position: relative;
+    }
+}
+
+
 
 
 /* every tile have this design */
@@ -47,6 +87,12 @@ body{
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+}
+#rulesText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    
 
 }
 

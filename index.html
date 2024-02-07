@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,29 @@
     <link rel="stylesheet" href="mole.css">
     <script src="mole.js"></script>
 </head>
+
 <body>
-    <h1>Whack  A Mole</h1>
-    <h2 id = "score">0</h2>
-    <!-- 3 x 3 board -->
-    <div id="board">
-        
+
+    <div class="container">
+        <div id="top_info">
+            <h1 class="title">Whack A Mole</h1>
+            <h2 id="score" class="score">0</h2>
+            <button onClick="playAgain()" class="play-again-button">
+                <h4 >Play Again</h4>
+            </button>
+        </div>
+        <div id="rules" >
+            <p id = "rulesText"></p>
+
+        </div>
+        <div id="board">
+        </div>
     </div>
-    
+
+
+    <!-- 3 x 3 board -->
+
+
 </body>
+
 </html>
