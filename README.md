@@ -1,1 +1,3 @@
-Need to add more features , more obstacles , more points  time limit UI 
+
+TO Play:
+https://mofazzal874.github.io/LagaBari/ 
